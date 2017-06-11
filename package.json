@@ -1,25 +1,21 @@
 {
-  "name": "boilerplate",
-  "description": "example of node js project",
-  "version": "1.0.2",
-  "author": "Erik Mangor",
-  "dependencies": {
-    "body-parser": "1.5.2",
-    "express": "4.4.3",
-    "config": "~1.12.0"
-  },
-  "devDependencies": {
-    "aws-sdk": "*",
-    "gulp": "^3.8.11",
-    "gulp-ssh": "^0.3.3",
-    "mocha": "*",
-    "ssh2": "0.3.0",
-    "yargs": "*"
-  },
-  "engines": {
-    "node": "6.3.1"
-  },
-  "scripts": {
-    "start": "app.js"
-  }
+    "name": "boilerplate",
+    "description": "example of node js project",
+    "version": "1.0.3",
+    "author": "Erik Mangor",
+    "dependencies": {
+        "body-parser": "1.17.1",
+        "express": "4.15.2"
+    },
+    "engines": {
+        "node": "6.11.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/emangor/boilerplate-nodejs.git"
+    },
+    "license": "MIT",
+    "scripts": {
+        "start": "node app.js"
+    }
 }

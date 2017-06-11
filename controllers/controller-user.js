@@ -7,9 +7,9 @@ module.exports.getUser = function(req, res, callback){
   userModel.getUser(username, function(err, response){
     if(err){
       console.log('errror = ' + err);
-      res.json(500, {status:'error', message:err, statusCode: 500});
+      res.status(500).json({status:'error', message:err, statusCode: 500});
     } else {
-      res.json(200, response);
+      res.status(200).json(response);
     }
   });
 } 
