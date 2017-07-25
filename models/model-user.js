@@ -1,9 +1,7 @@
-var logger = require('../utils/logger');
+const logger = require('../utils/logger');
 
-/* sample model method
-/* do the method work in here
-*/
-module.exports.getUser = function(username, callback){
+//sample model method
+module.exports.getUser = (username, callback) => {
     logger.debug('in model getUser username: ' + username);
     callback(null, username);
-}            
+}

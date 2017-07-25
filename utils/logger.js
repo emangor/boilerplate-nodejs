@@ -1,9 +1,9 @@
-var config = require('../config');
-var winston = require('winston');
+const config = require('../config');
+const winston = require('winston');
 
 //timestamp for logger
-var tsFormat = () => (new Date()).toLocaleTimeString();
-var logger = new(winston.Logger)({
+const tsFormat = () => (new Date()).toLocaleTimeString();
+const logger = new(winston.Logger)({
     transports: [
         // add colors and timestamp
         new(winston.transports.Console)({

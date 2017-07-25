@@ -1,9 +1,9 @@
-var config = require( './config' );
-var express = require('express');
+const config = require( './config' );
+const express = require('express');
 module.exports.express = express;
-var app = express();
+const app = express();
 module.exports.app = app;
-var routes = require('./routes');
-var logger = require('./utils/logger');
+const routes = require('./routes');
+const logger = require('./utils/logger');
 app.listen(config.port);
-logger.info(config.serviceName + ' is listening on port: ' + config.port);
+logger.info(`${config.serviceName} is listening on port: ${config.port}`);
