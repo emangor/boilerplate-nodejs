@@ -12,6 +12,7 @@ var healthcheckController = require('./controllers/controller-healthcheck');
 var userController = require('./controllers/controller-user');
  
 // healthcheck
+router.get('/', healthcheckController.healthcheck);
 router.get('/healthcheck', healthcheckController.healthcheck);
 
 // userController routes

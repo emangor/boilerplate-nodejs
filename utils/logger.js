@@ -1,27 +1,19 @@
-// logger.js
-var bunyan = require('bunyan');
-var package = require('.././package');
-var appName = package.name;
+var config = require('../config');
+var winston = require('winston');
 
-function reqSerializer(req) {
-  return {
-    method: req.method,
-    url: req.url,
-    headers: req.headers
-  }
-}
-
-var logger = bunyan.createLogger({
-	name: appName, 
-	serializers: {
-		req: reqSerializer
-	},
-  streams: [
-    {
-      level: 'info',
-      stream: process.stdout      
-    }
-  ]
+//timestamp for logger
+var tsFormat = () => (new Date()).toLocaleTimeString();
+var logger = new(winston.Logger)({
+    transports: [
+        // add colors and timestamp
+        new(winston.transports.Console)({
+            timestamp: tsFormat,
+            colorize: true,
+        })
+    ]
 });
+logger.cli();
+// logger level is set in the config
+logger.level = config.loggerLevel;
 
 module.exports = logger;
