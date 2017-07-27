@@ -1,5 +1,4 @@
-#example skeleton code of a node app using the MVC pattern
-# boilerplate-nodejs
+# example skeleton code of a node app using the MVC pattern
 1) after downloading run 'npm install'
 
 2) to start app run 'node app.js'
