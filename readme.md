@@ -5,3 +5,4 @@
 
 3) run healthcheck - http://localhost:3000/healthcheck
 
+4) run user route - http://localhost:3000/user/anyname
