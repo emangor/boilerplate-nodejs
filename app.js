@@ -23,7 +23,6 @@ if (cluster.isMaster) {
     const app = express();
     module.exports.app = app;
     const routes = require('./routes');
-    const logger = require('./utils/logger');
     app.listen(config.port, function () {
         logger.info(`worker started: ${cluster.worker.id} | server listening on port: ${config.port}`);
     });
