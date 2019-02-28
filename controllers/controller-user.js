@@ -1,15 +1,15 @@
 const logger = require('../utils/logger');
-const userModel = require('.././models/model-user');
+const userModel = require('../models/model-user');
 
 // user controller
-module.exports.getUser = (req, res) => {
+module.exports.getUser = async (req, res) => {
     let username = req.params.username;
-    userModel.getUser(username, function(err, response){
-        if(err){
-            logger.error(`getUser error: ${err}`);
-            res.status(500).json({status:'error', message:err, statusCode: 500});
-        } else {
-            res.status(200).json(response);
-        }
-    });
+    let response = null;
+    try {
+        response = await userModel.getUser(username);
+        res.status(200).json(response);
+    } catch (error) {
+        logger.error(`getUser error: ${error.message}`);
+        res.status(500).json({status:'error', message: error.message, statusCode: 500});
+    }
 }
