@@ -1,7 +1,7 @@
 {
     "name": "boilerplate",
     "description": "example of node js project",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "author": "Erik Mangor",
     "dependencies": {
         "body-parser": "^1.18.3",
@@ -9,7 +9,7 @@
         "winston": "3.1.0"
     },
     "engines": {
-        "node": "10.15.0"
+        "node": "10.15.2"
     },
     "repository": {
         "type": "git",
