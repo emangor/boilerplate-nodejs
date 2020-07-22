@@ -1,7 +1,7 @@
 {
     "name": "boilerplate",
     "description": "example of node js project",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "author": "Erik Mangor",
     "dependencies": {
         "body-parser": "^1.19.0",
